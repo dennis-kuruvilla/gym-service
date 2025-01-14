@@ -1,0 +1,28 @@
+POST http://localhost:3000/memberships
+Content-Type: application/json
+
+{
+  "name": "Davis",
+  "email": "davis@mail.com",
+  "startDate": "2025-08-27T14:00:00"
+}
+
+###
+GET http://localhost:3000/memberships?email=dennis@mail.com
+
+###
+GET http://localhost:3000/memberships
+
+###
+
+POST http://localhost:3000/memberships/dennis@mail.com/cancel
+
+
+###
+
+PATCH http://localhost:3000/memberships/dennis@mail.com
+Content-Type: application/json
+
+{
+  "startDate": "2025-06-29T14:00:00"
+}
